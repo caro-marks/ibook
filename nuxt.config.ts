@@ -33,7 +33,11 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['bootstrap-vue/nuxt', '@nuxtjs/axios'],
+
+  axios: {
+    baseURL: process.env.NOD_ENV === 'production' ? '' : 'https://randomuser.me'
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {}
