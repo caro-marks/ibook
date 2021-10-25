@@ -1,11 +1,10 @@
 <template>
-  <div class="home">
-    <h1>Home</h1>
-  </div>
+  <h1>Error 404</h1>
 </template>
+
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
-  layout: 'main'
+  layout: 'default'
 })
 </script>

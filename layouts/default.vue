@@ -1,16 +1,5 @@
 <template>
-  <div>
-    <ul>
-      <NuxtLink to="/">Home</NuxtLink>
-      <NuxtLink to="/sobre">Sobre</NuxtLink>
-    </ul>
+  <div class="default-layout">
     <Nuxt />
-    <footer>Rodapé</footer>
   </div>
 </template>
-
-<style scoped>
-a.nuxt-link-active {
-  font-weight: bold;
-}
-</style>
