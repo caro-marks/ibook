@@ -38,7 +38,8 @@ export default {
 
   axios: {
     baseURL:
-      process.env.NOD_ENV === 'production' ? '' : 'https://localhost:3333'
+      // process.env.NOD_ENV === 'production' ? '' : 'https://localhost:3333'
+      'https://ibook-api.herokuapp.com'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
