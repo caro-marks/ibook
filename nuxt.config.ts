@@ -18,13 +18,10 @@ export default {
   css: ['normalize.css/normalize.css', '@/assets/scss/base.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    // { src: '@/plugins/hellp', mode: 'server' },
-    '@/plugins/hellp.client'
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [{ path: '@/components', pathPrefix: false }],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -33,14 +30,14 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['bootstrap-vue/nuxt', '@nuxtjs/axios', '@nuxtjs/style-resources'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/style-resources'],
 
   styleResources: {
     scss: ['@/components/bosons/*.scss']
-  }
+  },
 
   axios: {
-    baseURL: process.env.NOD_ENV === 'production' ? '' : 'https://randomuser.me'
+    // baseURL: process.env.NOD_ENV === 'production' ? '' : 'https://randomuser.me'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
