@@ -1,29 +1,14 @@
 <template>
-  <div class="home">
-    <h1>Home</h1>
-
-    <h2>{{ title }}</h2>
-    <p>{{ content }}</p>
-  </div>
+  <HomeTemplate />
 </template>
+
 <script lang="ts">
 import Vue from 'vue'
-const sleep = () => {
-  return new Promise((resolve) => setTimeout(resolve, 1500))
-}
+import { books } from '@/store'
 export default Vue.extend({
-  layout: 'main',
+  layout: 'ibook',
   async asyncData() {
-    await sleep()
-    const title = 'Titulo da postagem'
-    const content = 'Corpo da postagem'
-    return { title, content }
-  },
-  data() {
-    return {
-      title: '',
-      content: ''
-    }
+    await books.index()
   }
 })
 </script>
